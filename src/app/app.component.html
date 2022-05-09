@@ -1,0 +1,8 @@
+<div *ngIf="classReference.navigation.Islogin&&classReference.navigation.isSubview===true">
+    <app-navigation></app-navigation>
+</div>
+
+<div *ngIf="classReference.navigation.Islogin===false||classReference.navigation.isSubview===false">
+<router-outlet></router-outlet>
+</div>
+

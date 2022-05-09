@@ -1,0 +1,368 @@
+<i class="fas fa-home"></i> {{lan.arrylan.customermaster_add_rlink1}} /
+		<i class="fas fa-user"></i> {{lan.arrylan.customermaster_add_rlink2}} / <i class="fas fa-plus"></i> {{lan.arrylan.customermaster_add_rlink3}}
+
+
+
+      <div class="col" >
+       <!--start main card-->
+         <div class="card" style="margin-top: 10px;margin-right: 15px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2)">
+        <h4 class="card-header" style="background-color:white;"> 
+ 
+         <div class="row">
+ 
+             <div class="col">
+               <div style="margin-top: -5px;margin-bottom:0px;"><i class="far fa-calendar-check"  style="padding-right: 10px;font-size: 18px;padding-top: 5px"></i>{{lan.arrylan.customermaster_add_cardname}} 
+               </div>
+             </div>
+           
+             <div class="col" style="float: right;max-width: 300px;">
+ 
+ 
+             <div class="col" >
+              <div style="padding-left:10px;padding-top:0px">
+                <button [disabled]="frmmodel.IsbtnSaveDisabled" type="button" (click)="clicksubmit()" class="btn btn-primary btnflip btnsave"  data-bs-toggle="dropdown"><div class="flapico2">{{lan.arrylan.common_btnsave}}</div></button>
+             </div>
+             <div style="padding-left:10px;padding-top:0px;">
+              <button type="button" (click)="btncancelclick()" class="btn btn-primary btnflip btncancel"><div class="flapico2">{{lan.arrylan.common_btncancel}}</div></button>
+           </div>
+               <div style="margin-left:180px;padding-top:0px">
+                 <button type="button" (click)="btnbackclick()" class="btn btn-primary btnflip btnmat1"><div class="flapico"><i class="fas fa-hand-point-left"></i> {{lan.arrylan.common_btnback}}</div></button>
+              </div>  
+             </div>
+ 
+ 
+ 
+             </div>
+ 
+         </div>
+ 
+ 
+        </h4>
+  
+        <div class="card-body" style="margin: -10px 0px 0px 0px;">
+ 
+ 
+ 
+
+    
+         <!--start sub card1-->
+         <div class="card">
+        
+           <div class="card-body">
+                
+             <div class="row">             
+
+                <div  class="col-md-6">
+              
+                   <div class="field-inline">
+                      <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblid}} *</label>
+                      <input readonly type="text"    [(ngModel)]="frmmodel.customer_id"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" (input)="on_customer_id_change()">
+                   </div>
+
+                   
+                   <div class="row">
+                    <div class="col"  style="padding-left: 140px;font-size: 12px;color: red;">
+                      <span *ngIf="validation.customer_id?.length > 0">
+                        {{validation.customer_id}}
+                      </span> 
+                    </div>
+                   </div>
+
+                </div>
+         
+
+                <div  class="col-md-6">
+                    <div class="field-inline">
+                     <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblname}} *</label>
+                     <input type="text" [(ngModel)]="frmmodel.customer_name"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" (input)="on_customer_name_change()">
+                    </div>
+
+                    <div class="row">
+                      <div class="col"  style="padding-left: 140px;font-size: 12px;color: red;">
+                        <span *ngIf="validation.customer_name?.length > 0">
+                          {{validation.customer_name}}
+                        </span> 
+                      </div>
+                     </div>
+
+                </div>
+
+           </div> 
+
+
+           <div class="row">             
+
+            <div class="col-md-6">
+          
+              
+              <div class="field-inline">
+                <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblnic}}</label>
+                <input type="text"   [(ngModel)]="frmmodel.nic_no"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+             </div>
+
+                
+
+               
+            </div>
+     
+            <div  class="col-md-6">
+          
+              <div class="field-inline">
+                 <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblmobile_no}}</label>
+                 <input type="text"   [(ngModel)]="frmmodel.mobile_no"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+              </div>
+           </div>
+            
+
+       </div> 
+
+
+
+
+
+       
+       <div class="row">             
+
+        <div class="col-md-6">
+      
+          
+          <div class="field-inline">
+            <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lbltel}}</label>
+            <input type="text"   [(ngModel)]="frmmodel.tel_no"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+         </div>
+
+            
+
+           
+        </div>
+ 
+        <div  class="col-md-6">
+      
+          <div class="field-inline">
+             <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblemail}}</label>
+             <input type="text"   [(ngModel)]="frmmodel.email"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+          </div>
+       </div>
+        
+
+   </div> 
+
+
+
+
+       <div class="row">             
+
+        <div class="col-md-6">
+      
+           <div class="field-inline">
+            <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lbladdress}}</label>
+            <textarea     [(ngModel)]="frmmodel.address"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" ></textarea>
+         </div>
+           
+        </div>
+ 
+        <div  class="col-md-6">
+      
+          <div class="field-inline">
+             <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lbloffice_address}}</label>
+             <textarea type="text"   [(ngModel)]="frmmodel.office_address"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+               </textarea>
+          </div>
+       </div>
+        
+
+   </div> 
+
+
+
+
+        <div class="row">             
+
+            <div  class="col-md-6">
+          
+               <div class="field-inline">
+                  <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblgrama_niladhari}}</label>
+                  <input type="text"   [(ngModel)]="frmmodel.grama_niladhari"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+               </div>
+            </div>
+     
+
+            <div  class="col-md-6">
+                <div class="field-inline">
+                 <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblbusiness_nature}}</label>
+                 <input type="text"  [(ngModel)]="frmmodel.business_nature"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+                </div>
+
+               
+
+
+            </div>
+
+       </div> 
+ 
+
+
+
+
+       <div class="row">             
+
+        <div  class="col-md-6">
+      
+          <div class="field-inline">
+            <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblcenter}}</label>
+            <input type="text"   [formControl]="center_fctrl" [matAutocomplete]="center_auto" [(ngModel)]="frmmodel.center"  class="form-control form-control-sm" id="colFormLabelSm">
+            <mat-autocomplete  #center_auto="matAutocomplete">
+              <mat-option *ngFor="let street of filtered_center | async" [value]="street.center">
+                {{street.center}}
+              </mat-option>
+            </mat-autocomplete>
+              <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+         </div>
+
+         </div>
+ 
+
+        <div  class="col-md-6">
+            
+          <div class="field-inline">
+            <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblteam}}</label>
+            <input type="text"   [formControl]="team_fctrl" [matAutocomplete]="team_auto" [(ngModel)]="frmmodel.team"  class="form-control form-control-sm" id="colFormLabelSm">
+            <mat-autocomplete  #team_auto="matAutocomplete">
+              <mat-option *ngFor="let street of filtered_team | async" [value]="street.team">
+                {{street.team}}
+              </mat-option>
+            </mat-autocomplete>
+            <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+         </div>
+
+           
+
+
+        </div>
+
+   </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="row">             
+
+    <div  class="col-md-6">
+  
+       <div class="field-inline">
+          <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lbljob_or_business}}</label>
+          <input type="text"   [(ngModel)]="frmmodel.job_or_business"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+       </div>
+    </div>
+
+
+    <div  class="col-md-6">
+        <div class="field-inline" style="width:470px;">
+          <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lbldocument}}</label>
+
+          <mat-button-toggle-group  multiple="true" class="btntog" [(ngModel)]="frmmodel.document" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle class="btntog"  value="n"><div class="btnttxt">{{lan.arrylan.customermaster_add_lbldoc_nic}}</div></mat-button-toggle>
+            <mat-button-toggle class="btntog"  value="a"><div class="btnttxt">{{lan.arrylan.customermaster_add_lbldoc_agreement}}</div></mat-button-toggle>
+            <mat-button-toggle class="btntog"  value="e"><div class="btnttxt">{{lan.arrylan.customermaster_add_lbldoc_electricity}}</div></mat-button-toggle>
+            <mat-button-toggle class="btntog"  value="p"><div class="btnttxt">{{lan.arrylan.customermaster_add_lbldoc_promissory}}</div></mat-button-toggle>
+          </mat-button-toggle-group>
+
+        </div>
+
+       
+
+
+    </div>
+
+</div> 
+
+   
+
+
+
+
+      
+
+
+
+
+   
+
+
+
+     
+
+        
+
+           
+             
+
+
+          
+
+
+
+            
+            
+  
+
+
+
+        
+
+
+
+
+       
+
+       
+   
+     
+
+
+
+   
+
+
+          
+
+
+
+
+
+
+             
+
+
+
+           </div>
+           </div>
+           <!--end sub card1-->
+
+
+
+         </div>
+      </div>
+      <!--end main card-->
+ 
+         
+
+
+
+
+
+      
+   </div>     
+  
+ 

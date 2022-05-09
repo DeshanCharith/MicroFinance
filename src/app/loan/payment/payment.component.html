@@ -1,0 +1,352 @@
+<div style="margin-top: 20px; margin-bottom: 40px;">
+    <i class="fas fa-home"></i> Home / <i class="fa fa-university"></i> Loan / <i class="fa fa-address-book" aria-hidden="true"></i> Add Loan
+    <!--start main 1 col-->
+        
+    <div class="homepage">
+         <div class="col" >
+          <!--start sub 2 col-->
+              <div class="card" style="margin-top: 10px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2)">
+           <h4 class="card-header"> 
+    
+            <div class="row">
+    
+                <div class="col">
+                  <div style="margin-top: -5px;margin-bottom:0px;"><i class="fa fa-address-book"  style="padding-right:8px;font-size: 16px;padding-top: 5px"></i>Add Loan
+                  </div>
+                  <div style="padding-left:10px;margin-top: -20px; float:right">
+                    <button type="button" (click)="btnbackclick()" class="btn btn-primary btnflip btnmat1"><div class="flapico"><i class="fas fa-hand-point-left" style="margin-right: 5px;"></i>Back</div></button>
+                  </div> 
+                </div>
+            </div>
+    
+           </h4>
+      
+           <div class="card-body" style="margin: -10px 0px 0px 0px;">
+              <div style="padding-bottom: 50px; margin-top:-15px">
+              
+                <div class="row">
+                <div class="col" >
+                    <!--start sub 2 col-->
+                        <div class="card" style="margin-top: 10px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);width:60%;margin-left:20%;">
+                     <h4 class="card-header"> 
+              
+                      <div class="row">
+              
+                          <div class="col">
+                            <div style="margin-top: -5px;margin-bottom:0px;"><i class="fa fa-user-circle"  style="padding-right:8px;font-size: 19px;padding-top:5px"></i>Choose Customer
+                            </div>
+
+                             <div class="col" >
+                                <div style="padding-left:10px;margin-top: -20px; float:right">
+                                <button type="button"  class="btn btn-primary btnflip btnmat2" (click) = "openDialog()" ><div class="flapico2"><i class="fas fa-plus"></i> Add Customer</div></button>
+                               </div>  
+                             </div>
+
+                          </div>
+                      </div>
+              
+                     </h4>
+                
+                     <div class="card-body" style="margin: -10px 0px 0px 0px;width:100%;">
+                        <div style="padding-bottom: 50px; margin-top : 20px">
+                        
+                            <table style="width:100%;">
+                                <tr>
+                                    <td>
+                                    <label for="exampleInputEmail1" style="font-size: 13px;">Loan ID</label></td>
+                                    <td>
+                                    <input readonly type="email"  class="form-control" style="font-size: 13px;" [(ngModel)]="frmmodel.loan_id" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
+                                    </td>
+                                </tr>
+                            <tr>
+                                <td>
+                                <label for="exampleInputEmail1" style="font-size: 13px;">Customer Name</label></td>
+                                <td style="padding-top: 15px;" >
+                                <input type="email" readonly class="form-control" style="font-size: 13px;" [(ngModel)]="frmmodel.fullname" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter full name">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="padding-top: 15px;">
+                                <label for="exampleInputEmail1" style="font-size: 13px;">{{lable_change1}}</label>
+                                </td>
+                                <td style="padding-top: 15px;" >
+                                <input type="email" readonly class="form-control" style="font-size: 13px;" id="exampleInputEmail1" [(ngModel)]="frmmodel.amount"  aria-describedby="emailHelp" placeholder="Enter NIC number">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-top: 15px;">
+                                <label for="exampleInputEmail1" style="font-size: 13px;">{{lable_change2}}</label>
+                                </td>
+                                <td style="padding-top: 15px;">
+                                <input type="email" readonly class="form-control" style="font-size: 13px;" id="exampleInputEmail1" [(ngModel)]="frmmodel.rental"  aria-describedby="emailHelp" placeholder="Enter address">
+                                </td>                
+                            </tr>
+    
+
+                            <tr>
+                                <td style="padding-top:15px;">
+                                <label for="exampleInputEmail1" style="font-size: 13px;">Remain</label></td>
+                                <td style="padding-top:15px;">
+                                <input type="email" readonly class="form-control" style="font-size: 13px;" id="exampleInputEmail1" [(ngModel)]="frmmodel.remain"  aria-describedby="emailHelp" placeholder="Enter mobile number">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-top: 15px;">
+                                <label for="exampleInputEmail1" style="font-size: 15px; font-weight: 500;">Payment</label></td>
+                                <td style="padding-top: 15px;">
+                                    <input type="email"  class="form-control" (ngModelChange)="onChangePayment($event)" style="font-size: 16px; font-weight: 600;color: white;background-color: black;letter-spacing: 2px;" id="exampleInputEmail1" [(ngModel)]="frmmodel.payment"  aria-describedby="emailHelp" placeholder="Enter Payment">
+                            </td>
+                           </tr>
+                           <tr>
+                               <td></td>
+                               <td>
+                                <button mat-raised-button color="warn" id="cg-save" (click)="AddNewLoan()" style="box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%); background-color: #2d53fd;margin-left:0px;float:right;margin-top: 15px;"><i class="fas fa-plus" style="font-size: 10px;margin-top: -2px;"></i>&nbsp;Pay</button>
+                               </td>
+                            
+                           </tr>
+                           
+
+                        </table> 
+   
+                        
+                        </div>
+                      </div>
+                   </div>  
+                </div> 
+
+
+                <!-- <div class="col" >
+                   
+                        <div class="card" style="margin-top: 10px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2)">
+                     <h4 class="card-header"> 
+              
+                      <div class="row">
+              
+                          <div class="col">
+                            <div style="margin-top: -5px;margin-bottom:0px;"><i class="fa fa-credit-card"  style="padding-right:8px;font-size: 17px;padding-top: 5px"></i>Loan Details
+                                <div class="col" >
+                                    <div style="padding-left:10px;margin-top: -20px; float:right">
+                                    <button type="button"  class="btn btn-primary btnflip btnmat2" style="background-color: gray;border-color: black;"><div class="flapico2">Loan Number : 1242 </div></button>
+                                   </div>  
+                                 </div>
+                            </div>
+                          </div>
+                      </div>
+              
+                     </h4>
+                
+                     <div class="card-body" style="margin: -10px 0px 0px 0px;">
+                        <div style="padding-bottom: 50px; margin-top : 20px">
+                        
+                        
+                        <div class="row">
+                            <div class="col-3"> <label for="exampleInputEmail1" style="font-size: 13px;">Loan Amonut</label> </div>
+                            <div class="col-5"> <input type="email" [(ngModel)]="frmmodel.amount" (ngModelChange)="onChangeAmount($event)"  class="form-control" style="font-size: 13px;margin-top: -8px;margin-left: -40px; font-weight:500;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter loan amount"> </div>
+                            <div class="col">  <label for="exampleInputEmail1" style="font-size: 13px;margin-left: 40px;">Interest</label> </div>
+                            <div class="col"> <input type="email" [(ngModel)]="frmmodel.interest"  (ngModelChange)="onChangeInterest($event)" class="form-control" style="font-size: 13px;margin-top: -8px;font-weight:500;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="%"> </div>
+                        </div>
+
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-3"> <label for="exampleInputEmail1" style="font-size: 13px;">Payment Plan</label> </div>
+                            <div class="col-5"> 
+                                <select class="custom-select custom-select-sm" [(ngModel)]="this.frmmodel.payment_plan" (ngModelChange)="onChangePaymentPlane($event)" style="font-size: 13px;margin-top: -8px;margin-left: -40px;font-weight:500; color:rgb(117, 120, 121); padding:7px;width: 100%;border-color: rgba(162, 164, 165, 0.707);border-radius: 4px;">
+                                    <option value="Daily">Daily</option>
+                                    <option value="Weekly">Weekly</option>
+                                    <option value="Monthly">Monthly</option>
+                                  </select> </div>
+                            <div class="col">  <label for="exampleInputEmail1" style="font-size: 13px;margin-left: 40px;">{{frmmodel.steps_label}}</label> </div>
+                            <div class="col"> <input type="email" [(ngModel)]="frmmodel.steps" (ngModelChange)="onChangeSteps($event)" class="form-control" style="font-size: 13px;margin-top: -8px;font-weight:500;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder={{frmmodel.steps_label}}> </div>
+                        </div>
+                          
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-2"> <label for="exampleInputEmail1" style="font-size: 13px;">Rental</label> </div>
+                            <div class="col-5"> <input type="email" [(ngModel)]="frmmodel.rental" readonly class="form-control" style="font-weight:500;font-size: 13px;margin-top: -8px;margin-right:-10px;float: right;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter rental"> </div>
+                            <div class="col-2">  <label for="exampleInputEmail1" style="font-size: 13px;margin-left: 30px;">Route</label> </div>
+                            <div class="col-3"> 
+                                <select class="custom-select custom-select-sm" [(ngModel)]="frmmodel.route" style="font-size: 13px;margin-top: -8px;color:rgb(117, 120, 121); padding:7px;width: 100%;border-color: rgba(162, 164, 165, 0.707);border-radius: 4px;">
+                                    <option selected>Select Route</option>
+                                    <option value="1">KALUTHARA</option>
+                                    <option value="2">COLOMBO</option>
+                                    <option value="3">KANDY</option>
+                                  </select> </div>            
+                        </div>
+
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-2"> <label for="exampleInputEmail1" style="font-size: 13px;">Loan Officer</label> </div>
+                            <div class="col">
+                            <select class="custom-select custom-select-sm" [(ngModel)]="frmmodel.loanofficer" style="margin-left:10px;font-size: 13px;margin-top: -8px;color:rgb(117, 120, 121); padding:7px;width: 98%;border-color: rgba(162, 164, 165, 0.707);border-radius: 4px;">
+                                <option selected>Select loan officer</option>
+                                <option value="1">C B Dasnayake</option>
+                                <option value="2">Rohan Gunathlaka</option>
+                                <option value="3">Ashan Karunarathne</option>
+                              </select>
+                            </div>
+                        </div>
+
+                         
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-2"> <label for="exampleInputEmail1" style="font-size: 13px;">Start Date</label> </div>
+                            <div class="col-4">
+                                <mat-form-field appearance="outline" style="font-size: 13px;margin-top:-8px; margin-left: 10px; width: 220px; ">
+                                    <mat-label>Start date </mat-label>
+                                    <input matInput [matDatepicker]="picker" [(ngModel)]="frmmodel.start_date" (ngModelChange)="DateCalculator($event)" style="font-weight: 500;">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                             </div>
+
+                            <div class="col-2">  <label for="exampleInputEmail1" style="font-size: 13px;margin-left: 55px;">End Date</label> </div>
+                            <div class="col-4"> <input type="email"  class="form-control" [(ngModel)]="frmmodel.end_date" style="font-size: 13px;margin-top: -6px;padding-bottom: 13px;padding-top: 13px;font-weight: 500;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="mm/dd/yyyy"> </div>
+                        </div>
+
+
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-2"> <label for="exampleInputEmail1" style="font-size: 13px;">Doc Charges</label> </div>
+                            <div class="col">
+                             <input type="email"  class="form-control"  [(ngModel)]="frmmodel.doc_charges" style="font-size: 13px;margin-top: -8px;width:98%;margin-left:10px;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter loan amount">
+                            </div>
+                        </div>
+
+                    
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-3"> <label for="exampleInputEmail1" style="font-size: 13px;">Penalty</label> </div>
+                            <div class="col-4"> 
+                                <select class="custom-select custom-select-sm" [(ngModel)]="frmmodel.penalty" style="font-size: 13px;margin-top: -8px;margin-left: -40px; color:rgb(117, 120, 121); padding:7px;width: 100%;border-color: rgba(162, 164, 165, 0.707);border-radius: 4px;">
+                                    <option selected>Select Penalty</option>
+                                    <option value="1">YES</option>
+                                    <option value="2">NO</option>
+                                    
+                                    </select> </div>
+                            <div class="col-3">  <label for="exampleInputEmail1" style="font-size: 13px;margin-left: 60px;">Penalty % </label> </div>
+                            <div class="col-2"> <input type="email"  class="form-control" [(ngModel)]="frmmodel.penalty_intr" style="font-size: 13px;margin-top: -8px;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="%"> </div>
+                        </div>
+
+
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-3"> <label for="exampleInputEmail1" style="font-size: 13px;">Due Interest</label> </div>
+                            <div class="col-4"> 
+                                <input type="email"  class="form-control" [(ngModel)]="frmmodel.due_interest" style="font-size: 13px;margin-top: -8px; margin-left: -40px;" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="0.34">  </div>
+                            <div class="col-3">  <label for="exampleInputEmail1" style="font-size: 13px;margin-left: 60px;"> </label> </div>
+                            <div class="col-2"> 
+                                <button mat-raised-button color="warn" id="cg-save" (click)="AddNewLoan()" style="box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%); background-color: #2d53fd;margin-left:0px;"><i class="fas fa-plus" style="font-size: 10px;margin-top: -2px;"></i>&nbsp;Save</button>
+                            </div>
+                        </div>
+
+                        </div>
+                      </div>
+                   </div>  
+                </div>  -->
+                </div>
+
+                <div class="col" >
+                    <!--start sub 2 col-->
+                        <div class="card" style="margin-top:40px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2)">
+                     <h4 class="card-header"> 
+              
+                      <div class="row">
+              
+                          <div class="col">
+                            <div style="margin-top: -5px;margin-bottom:0px;"><i class="fa fa-users"  style="padding-right: 10px;font-size: 18px;padding-top: 5px"></i>Loan History
+                            </div>
+                          </div>
+                      </div>
+              
+                     </h4>
+                
+                     <div class="card-body" style="margin: -10px 0px 0px 0px;">
+                        <div style="width: 100%; margin-left:0%; padding-bottom: 50px; margin-top : 20px">
+        
+                            <mat-form-field>
+                              <mat-label id="label_filter" style="font-size: 14px;">Search by : </mat-label>
+                              <input matInput (keyup)="applyFilter($event)" placeholder="Ex. id,nic,name,address,mobile">
+                            </mat-form-field>
+                      
+                            <div class="mat-elevation-z8" style="width: 100%; margin-top:30px;">
+                              <div class="scrollit">
+                              <table mat-table [dataSource]="dataSource" style="width: 100%;">
+                            
+                                <!-- Symbol Column -->
+                                <ng-container matColumnDef="id">
+                                  <th mat-header-cell *matHeaderCellDef> ID</th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:40px;"> {{element.id}} </td>
+                                </ng-container>
+              
+                                <ng-container matColumnDef="loan_id">
+                                  <th mat-header-cell *matHeaderCellDef>Loan ID</th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:100px;"> {{element.loan_id}} </td>
+                                </ng-container>
+                            
+                                <!-- Symbol Column -->
+                                <ng-container matColumnDef="cus_id">
+                                  <th mat-header-cell *matHeaderCellDef> Customer NIC </th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:100px;"> {{element.cus_id}} </td>
+                                </ng-container>
+                            
+                                <!-- Symbol Column -->
+                                <ng-container matColumnDef="cus_name">
+                                  <th mat-header-cell *matHeaderCellDef> Customer name</th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:150px;"> {{element.cus_name}} </td>
+                                </ng-container>
+              
+                                <ng-container matColumnDef="payment">
+                                  <th mat-header-cell *matHeaderCellDef>Payment</th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:100px;"> {{element.payment}} </td>
+                                </ng-container>
+                            
+                                <ng-container matColumnDef="remain">
+                                  <th mat-header-cell *matHeaderCellDef>Ramain </th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:150px;"> {{element.remain}} </td>
+                                </ng-container>
+                            
+                                <!-- Symbol Column -->
+                                <ng-container matColumnDef="date">
+                                  <th mat-header-cell *matHeaderCellDef>Date</th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:100px;"> {{element.date}} </td>
+                                </ng-container>
+              
+                                <ng-container matColumnDef="current_user">
+                                  <th mat-header-cell *matHeaderCellDef>User</th>
+                                  <td mat-cell *matCellDef="let element" style="cursor: pointer;min-width:170px;"> {{element.current_user}} </td>
+                                </ng-container>
+               
+                                <ng-container matColumnDef="action">
+                                  <th mat-header-cell *matHeaderCellDef> Action</th>
+                                  <td mat-cell *matCellDef="let element" style="min-width:100px;">
+                                    <mat-icon (click)="EditPaymentData(element.id,element.loan_id,element.cus_id,element.cus_name,element.remain,element.payment,element.date)" style="font-size: 20px;margin-left: 8px; cursor:pointer;color: green;box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);background-origin: padding-box;border: solid;border-width: 1px;background-color: rgb(153, 250, 166);border-color: silver;">edit</mat-icon> &nbsp; 
+                                    <mat-icon (click)="DeletePayment(element.id)" style="font-size: 20px;cursor:pointer;color: rgba(204, 12, 12, 0.822);box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);background-origin: padding-box;border: solid;border-width: 1px;background-color: rgb(255, 184, 184);border-color: silver;">delete</mat-icon>
+                                  </td>
+                                </ng-container>
+              
+                                <!-- <ng-container matColumnDef="action">
+                                  <th mat-header-cell *matHeaderCellDef style="text-align: right;"> Action</th>
+                                  <td mat-cell *matCellDef="let element"  (click)="SelectCustomer(element.id,element.fullname,element.amount,element.rental,element.nic_no,element.remain)"> <i class="fa fa-sign-in" aria-hidden="true" style="margin-left: 30px;font-size: 20px; cursor:pointer;color: green;box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);background-origin: padding-box;border: solid;border-width: 1px;background-color: rgb(153, 250, 166);border-color: silver;padding: 5px;"></i></td>
+                                </ng-container> -->
+              
+                                
+                            
+                                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                              </table>
+                              </div>
+                            
+                              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+                            </div>
+                      
+              
+                          </div>
+                      </div>
+                   </div>  
+                </div> 
+              
+                             
+              </div>
+            </div>
+         </div>  
+      </div>     
+    </div>
+    </div>
+    
+    

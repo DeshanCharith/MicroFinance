@@ -1,0 +1,130 @@
+[login]
+product_name : MF
+hed_name : Login
+username : Username
+password : Password
+btn_login : Login
+footer_name : MF System
+build_year : 2021
+
+
+[dashboard]
+sidenav_hed_name : MF
+sidenav_title1 : OVERVIEW
+sidenav_itm1 : Dashboard
+sidenav_itm2 : Reporting
+sidenav_itm3 : Logs
+sidenav_subitm1 : User log
+sidenav_subitm2 : Error Logs
+sidenav_itm4 : Total View
+sidenav_title2 : Transactions
+sidenav_itm5 : Customer
+sidenav_itm6 : Loan
+sidenav_itm7 : Loan review
+sidenav_subitm3 : Officer
+sidenav_subitm4 : Loan Approve
+sidenav_itm8 : Officer
+sidenav_subitm5 : Host Template
+sidenav_subitm6 : Service Template
+sidenav_title3 : ADMINISTRATION
+sidenav_itm9 : User
+sidenav_itm10 : Objects
+sidenav_subitm7 : Contacts
+sidenav_subitm8 : Commands
+sidenav_subitm9 : Time Periods
+sidenav_subitm10 : Host Escalations
+sidenav_subitm11 : Service Escalations
+sidenav_subitm12 : Host Dependencies
+sidenav_subitm13 : Service Dependencies
+
+sidenav_subitm14 : Contact group
+sidenav_subitm15 : Contact Template
+
+btnsearc_itm1 : Cusomer
+btnsearc_itm2 : Loan
+btnsearc_itm3 : Report
+txtsearc_placeholder : Type to search
+
+ttip_btnfind : Find
+ttip_btnnotift : Notification
+ttip_btnnotifi_cnt : Notification count
+ttip_btnrefresh : Refresh configuration
+ttip_btntime : System time
+ttip_btnuser : User options
+
+pnlnotifi_h1 : NOTIFICATIONS
+pnlnotifi_h2 : Dismiss all
+
+dropdwn_user_itm1 : Change Password
+dropdwn_user_itm2 : Sign Out
+
+
+
+[common]
+common_btnrefresh : Refresh
+common_btnnew : New
+common_btnfilter : Filter
+common_btnback : Back
+common_lblfind : Find
+common_btnsave : Save
+common_btncancel : Cancel
+common_btnclose : Close
+
+
+[customer-master-list]
+customermaster_list_rlink1 : Home
+customermaster_list_rlink2 : Customer master
+customermaster_list_cardname : Customer master overview
+
+customermaster_list_th1 : Customer id
+customermaster_list_th2 : Customer Name
+customermaster_list_th3 : N.I.C No
+customermaster_list_th4 : Mobile No
+customermaster_list_th5 : Last modified
+customermaster_list_th6 : Edit
+customermaster_list_th7 : Delete
+
+[customer-master-add]
+customermaster_add_rlink1 : Home
+customermaster_add_rlink2 : Customer master
+customermaster_add_rlink3 : Add
+
+customermaster_add_tab1 : General
+customermaster_add_tab2 : Warehouse
+customermaster_add_tab3 : Custom fields
+customermaster_add_tab4 : Image
+
+customermaster_add_cardname : Create new customer
+
+customermaster_add_lblid : Customer Id
+customermaster_add_lblname : Full Name
+customermaster_add_lblnic : N.I.C No
+customermaster_add_lbloffice_address : Office Address
+customermaster_add_lbladdress : Address
+customermaster_add_lblmobile_no : Mobile No
+customermaster_add_lbltel : Tel
+customermaster_add_lblemail :  Email
+customermaster_add_lblgrama_niladhari : Grama Niladhari
+customermaster_add_lblbusiness_nature: Business Nature
+customermaster_add_lblcenter : Center
+customermaster_add_lblteam : Team
+customermaster_add_lbljob_or_business : Job or Business
+customermaster_add_lbldocument : Document
+customermaster_add_lbldoc_nic : NIC
+customermaster_add_lbldoc_agreement : Agreement
+customermaster_add_lbldoc_electricity : Electricity
+customermaster_add_lbldoc_promissory : Promissory Note
+
+
+[loan-officer-add]
+loanofficer_add_rlink1 : Home
+loanofficer_add_rlink2 : Loan Officer
+loanofficer_add_rlink3 : Add
+
+loanofficer_add_cardname : Loan Officer
+
+loanofficer_add_btnadd : Add
+
+loanofficer_add_tblth1 : Name
+loanofficer_add_tblth2 : Edit
+loanofficer_add_tblth3 : Delete

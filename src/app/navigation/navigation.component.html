@@ -1,0 +1,270 @@
+
+
+<mat-sidenav-container  class="example-container" autosize>
+	<mat-sidenav  #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+		<mat-nav-list>
+             
+			<mat-card class="navcard">
+				<div class="row">
+                <div class="col" style="max-width: 10px;margin-left: -10px;"><img src="assets/images/Logo.png" width="35px" height="35px"/></div>
+				<div class="col" style="margin-left: 10px;margin-top: 10px;margin-right: -10px;"><mat-label class="navcardname" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_hed_name}}</mat-label></div>
+			</div>
+			</mat-card>
+               <div class="navtitle">
+				<span class="full-width sidenavtitle" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_title1}}</span>
+			</div>
+            <mat-list-item  class="navitm"  (click)="hideMenu()">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm1}}</span>
+				<i class="fas fa-tachometer-alt sidenavico" mat-list-icon></i>
+			</mat-list-item>
+            
+			<a routerLink="/home">
+            <mat-list-item class="navitm">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm2}}</span>
+				<i class="fas fa-chart-line"  mat-list-icon></i>
+			</mat-list-item></a>
+ 
+
+
+            
+			<div class="navtitle">
+				<span class="full-width sidenavtitle" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_title2}}</span>
+			</div>
+
+			<a routerLink="/customer-master-list"><mat-list-item class="navitm">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm5}}</span>
+				<i class="fas fa-boxes"  mat-list-icon></i>
+			</mat-list-item></a>
+
+			<a routerLink="/loan-list"><mat-list-item class="navitm"  (click)="ClickNavService()">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm6}}</span>
+				<i class="fas fa-money-check-alt" mat-list-icon></i>
+			</mat-list-item></a>
+
+
+			<a routerLink="/loan-list"><mat-list-item class="navitm"  (click)="ClickItem_Category()">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm7}}</span>
+				<i class="fas fa-money-check-alt" mat-list-icon></i>
+			</mat-list-item></a>
+
+
+			<a routerLink="/loan-officer-add"><mat-list-item class="navitm"  (click)="ClickWareHouse_Master()">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm8}}</span>
+				<i class="fas fa-money-check-alt" mat-list-icon></i>
+			</mat-list-item></a>
+
+
+	
+
+           
+		
+
+			<div class="submenu" [ngClass]="{'expanded' : showSubmenu4}" *ngIf="showSubmenu4">
+				<mat-list-item class="navitm" (click)="ClickNavContact()">
+			   <span class="full-width subitm" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_subitm7}}</span>
+			   <i id="subid" class="fa fa-user"  mat-list-icon></i>
+			  </mat-list-item>
+			  <mat-list-item class="navitm" (click)="ClickNavCommand()">
+			   <span class="full-width subitm" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_subitm8}}</span>
+			   <i class="fa fa-terminal"  mat-list-icon></i>
+			  </mat-list-item>
+			  <mat-list-item class="navitm" (click)="ClickNavService_Group()">
+				<span class="full-width subitm" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_subitm9}}</span>
+				<i id="subid" class="fas fa-clock navitm"  mat-list-icon></i>
+			   </mat-list-item>
+			   <mat-list-item class="navitm" (click)="ClickNavService_Group()">
+				<span class="full-width subitm" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_subitm10}}</span>
+				<i class="fas fa-bomb"  mat-list-icon></i>
+			   </mat-list-item>
+			   <mat-list-item class="navitm" (click)="ClickNavService_Group()">
+				<span class="full-width subitm" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_subitm11}}</span>
+				<i class="fas fa-bomb"  mat-list-icon></i>
+			   </mat-list-item>
+			   <mat-list-item class="navitm" (click)="ClickNavService_Group()">
+				<span class="full-width subitm" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_subitm12}}</span>
+				<i class="fas fa-sitemap"  mat-list-icon></i>
+			   </mat-list-item>
+		   </div>
+		
+
+		
+			
+	
+
+
+
+
+			<div class="navtitle">
+				<span class="full-width sidenavtitle" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_title3}}</span>
+			</div>
+
+			<mat-list-item class="navitm"  (click)="ClickNavadminmain()">
+				<span class="full-width" *ngIf="isExpanded || isShowing">{{lan.arrylan.sidenav_itm9}}</span>
+				<i class="fas fa-users" mat-list-icon></i>
+			</mat-list-item>
+
+
+
+
+		
+
+		</mat-nav-list>
+	</mat-sidenav>
+
+
+	<mat-toolbar color="primary" class="example-toolbar">
+		<mat-button-toggle class="btntoggle" mat-icon-button (click)="menu()"><mat-icon class="menuico">menu</mat-icon></mat-button-toggle>
+		
+		<div class="colbtn"  >
+		<button class="btnsearch" mat-stroked-button [matMenuTriggerFor]="menu2">
+			<spnn *ngIf="select===1">
+				{{lan.arrylan.btnsearc_itm1}}
+			</spnn>
+			<spnn *ngIf="select===2">
+				{{lan.arrylan.btnsearc_itm2}}
+			</spnn>
+			<spnn *ngIf="select===3">
+				{{lan.arrylan.btnsearc_itm3}}
+			</spnn>
+			<i class="fas fa-chevron-down dwnarrowico"></i>
+			 </button>
+		</div>
+	  <mat-menu #menu2="matMenu">
+	  <button (click)="onClick(1)" class="serchitm" mat-menu-item>{{lan.arrylan.btnsearc_itm1}}</button>
+	  <button (click)="onClick(2)"  class="serchitm" mat-menu-item>{{lan.arrylan.btnsearc_itm2}}</button>
+	  <button (click)="onClick(3)"  class="serchitm" mat-menu-item>{{lan.arrylan.btnsearc_itm3}}</button>
+	  </mat-menu>
+		
+		<input style="max-width: 30%;margin-left: -5px;" class="form-control form-control-sm txtsearch" type="text" placeholder="  {{lan.arrylan.txtsearc_placeholder}}">
+		<button type="button" class="btn btn-light btnsearchnow"  matTooltip="{{lan.arrylan.ttip_btnfind}}"><i class="fas fa-search navfindico"></i></button>
+		<span class="example-spacer"></span>
+	
+	
+		<div class="dropdown">
+		
+			<button class="btnmat" mat-stroked-button matTooltip="{{lan.arrylan.ttip_btnnotift}}" data-bs-toggle="dropdown">	<i class="fas fa-bell navico"></i></button>
+			<button class="btnmat2" mat-stroked-button matTooltip="{{lan.arrylan.ttip_btnnotifi_cnt}}">6</button>
+		
+			
+					<ul class="dropdown-menu"  aria-labelledby="dropdownMenuButton1">
+						
+						<div >
+	
+							<div class="notification-item row">
+								<div class="col"><div class="hednotifi" class="item-title">{{lan.arrylan.pnlnotifi_h1}} (6)</div></div>
+								<div class="col" style="max-width: 100px;"><label class="lbldismiss">{{lan.arrylan.pnlnotifi_h2}}</label></div>
+							</div>
+	
+							<hr class="hr">
+							<table style="width: 380px;" mat-table [dataSource]="dsnotifi" class="mat-elevation-z8">
+	
+								<!--- Note that these columns can be defined in any order.
+									  The actual rendered columns are set as a property on the row definition" -->
+							  
+								<!-- status Column -->
+								<ng-container matColumnDef="status">
+								  <th mat-header-cell *matHeaderCellDef>  </th>
+								  <td mat-cell *matCellDef="let element">    <i  class="fas fa-exclamation-triangle ico-warnning"></i> </td>
+								</ng-container>
+							  
+								<!-- description Column -->
+								<ng-container matColumnDef="description" style="max-width: 400px;">
+								  <th mat-header-cell *matHeaderCellDef  style="max-width: 400px;">  </th>
+								  <td mat-cell *matCellDef="let element"  style="max-width: 400px;"> {{element.description}} </td>
+								</ng-container>
+	
+									<!-- close Column -->
+									<ng-container matColumnDef="close">
+										<th mat-header-cell *matHeaderCellDef>  </th>
+										<td mat-cell *matCellDef="let element">  <i class="fas fa-window-close btnnotificlose"></i> </td>
+									  </ng-container>
+							  
+									  <tr mat-row *matRowDef="let row; columns: displayedColumnnotifi;"></tr>
+							</table>
+							  
+							  
+						  </div>
+	
+					</ul>
+			   </div>
+	
+		  
+	
+	
+		
+		<span class="example-spacer"></span>
+		<button (click)="click_btnrefresh()" class="btnmatsync" mat-stroked-button matTooltip="{{lan.arrylan.ttip_btnrefresh}}">	
+			<i [ngStyle]="{'color':th.refresh_status === 0 ? 'red' : 'blue' }" class="fas fa-sync navico"></i>
+		</button>
+		<span class="example-spacer"></span>
+		
+		<button class="btnmatclock" mat-stroked-button matTooltip="{{lan.arrylan.ttip_btntime}}">	<i class="fas fa-clock navico"></i></button>
+	
+		<button class="btnmat2" mat-stroked-button matTooltip="{{lan.arrylan.ttip_btntime}}">	<!--digital clock start-->
+			<label class='hr-tv col coltime'></label>
+			<label class='colon-tv col coltime'>:</label>
+			<label class='min-tv col coltime'></label>
+			<label class='colon-tv col coltime'>:</label>
+			<label class='sec-tv col coltime'></label>
+	  <!--digital clock end--></button>
+	
+	
+		
+		<span class="example-spacer"></span>
+	
+		<div class="dropdown">
+		
+		<button class="btnmatuser"id="dropdownMenuButton1" mat-stroked-button matTooltip="{{lan.arrylan.ttip_btnuser}}" data-bs-toggle="dropdown">	<i class="fas fa-user navico"></i></button>
+	
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<div>
+					<a class="dropdown-item userset" href="#">
+					  <i class="fa fa-cog user-setting-icon"  aria-hidden="true">
+					 </i>
+					 {{lan.arrylan.dropdwn_user_itm1}}</a>
+	  
+					<a class="dropdown-item userset" (click)="logout()">
+						  <i class="fas fa-sign-out-alt user-logout-icon">
+						  </i>
+						  {{lan.arrylan.dropdwn_user_itm2}}</a>
+	  
+				  </div>
+			</ul>
+	   </div>
+	
+	
+	</mat-toolbar>
+
+	<div class="example-sidenav-content" style="padding-top: 10px;padding-right: 10px;">
+
+		
+
+				
+		<router-outlet></router-outlet>
+	     
+
+
+
+	   
+	   <!--<span  *ngIf="lan.navigation.host" style="padding-left: 10px;">
+		<i class="fas fa-home"></i> Home /
+		<i class="fas fa-desktop"></i> Hosts
+	 </span>
+	   <span class="full-width" *ngIf="lan.navigation.Viewhost">
+		<app-host-list></app-host-list>
+	 </span>
+	 <span class="full-width" *ngIf="lan.navigation.Addhost">
+		<app-host-add></app-host-add>
+	 </span>!-->
+
+	 <router-outlet></router-outlet>
+	 
+	</div>
+
+	
+
+</mat-sidenav-container>
+
+<!--<mat-card style="height: 35px;">
+ <table align="center">@Itheon 2021</table>
+</mat-card>!-->

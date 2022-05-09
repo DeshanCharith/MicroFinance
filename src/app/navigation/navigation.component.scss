@@ -1,0 +1,371 @@
+.example-container {
+    height: 100vh;
+    background-color: rgb(230, 244, 245);
+  }
+  .example-sidenav-content {
+    height: 92%;
+    margin-left: 10px;
+    margin-right: 0px;
+ 
+  }
+
+  .btnmat2 .btnmatsync:hover{
+      padding-left: 500px;
+  }
+
+  .full-width {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 15px;
+    padding-right: 0px;
+    margin-top: -5px;
+    width: 200px;
+  }
+  .menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+  }
+  .menu-button.rotated {
+    transform: rotate(180deg);
+  }
+  .submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .submenu.expanded {
+    transform: scaleY(1);
+  }
+
+  .navitm{
+    color: #778c85;
+  
+  }
+
+  #subid{
+    color: #778c85;
+  }
+
+  .example-sidenav mat-list-item{
+    max-height: 40px;
+    height: 40px;
+  }
+
+  .navitm i{
+    font-size: 20px;
+  }
+
+  .navitm mat-icon{
+    font-size: 20px;
+  }
+  
+  .submenu{
+    margin-top: -10px;
+  }
+  .submenu a{
+  font-size: 15px;
+  }
+  
+  .navitm:hover{
+    background-color:#353c42;
+    color: rgb(255, 255, 255);
+  }
+
+  body{
+    font-family:'Open Sans';
+  }
+
+
+  .example-toolbar{
+    background-color: white;
+    height: 40px;
+    z-index: 100;
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+  }
+
+  .example-sidenav {
+    user-select: none;
+    background-color:#212529;
+    background-image: linear-gradient(to right, #212529 , #394b5e);
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    max-width: 270px;
+    overflow: auto;
+    float: left;
+
+    
+ }
+
+
+  .btntoggle{
+    margin-left: -10px;
+    max-height: 30px;
+    max-width: 40px;
+    color:black
+  }
+
+  .menuico{
+    margin-top: -22px;
+    margin-left: -5px;
+  }
+
+  .navcard{
+    margin-top: -10px;
+    background-color:#212529;
+    background-image: linear-gradient(to right, #212529 , #2e3e4e);
+  }
+
+   .navcardname{
+    color:white;
+    padding-left: 15px;
+    font-size: 20px;
+  }
+
+ /* .btnmatsync:hover  .fa-sync {
+     animation: rotation 1s infinite linear;
+
+  }*/
+
+  @keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+  .btnmat:hover  .fa-bell {
+    animation: rotatebell 1s ease-in-out 0s;
+  }
+  
+  @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+      
+  }
+
+  @keyframes rotatebell {
+    from { transform: rotate(-40deg); }
+    to { transform: rotate(40deg); }
+    
+}
+
+ 
+
+  mat-grid-tile {
+    background: lightblue;
+  }
+
+  * {
+    margin:0 auto;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .colbtn{
+    padding-left: 20px;
+    font-size: 13px;
+    padding-top: 1px;
+ 
+  }
+  .btnsearch{
+    border: none;
+    border-radius:5px 0 0 5px;
+    height: 32px;
+    background-color: #d4e0da;
+    color: black;
+  }
+
+  .dwnarrowico{
+    padding-left: 10px;
+
+  }
+
+  .serchitm{
+    color: rgb(9, 9, 214);
+  }
+
+  .expandico{
+    font-size: 16px;
+    margin-bottom: -50px;
+  }
+
+
+  .txtsearch:focus {
+    box-shadow: none;
+  }
+
+  .example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.btnmat{
+  border-radius:8px 0px 0px 8px;
+  background-color: #ecf7f1;
+ color:  #0f68ee;
+ height: 30px;
+}
+.navico{
+  font-size: 20px;
+  margin-top: -5px;
+}
+
+.fa-user{
+  color: black;
+}
+
+.fa-clock{
+  color: black;
+}
+
+.navfindico{
+  font-size: 20px;
+  margin-top: -5px;
+}
+
+.btnmat2{
+    border-radius:0px 8px 8px 0px;
+    background-color: #17e66a;
+    color: white;
+    height: 30px;
+    width: 70px;
+
+}
+
+.btnmatsync{
+  border-radius:8px 8px 8px 8px;
+  background-color: #ecf7f1;
+ color:  #3110ee;
+ height: 30px;
+}
+
+.btnsearchnow{
+  background-color: #d4e0da;
+ color:  #3110ee;
+ height: 35px;
+ width: 50px;
+}
+.btnsearchnow:focus{
+  box-shadow: none;
+}
+.btnsearchnow:hover{
+  background-color: #cbd4cf;
+}
+.btnmatclock{
+  border-radius:8px 0px 0px 8px;
+  background-color: #ecf7f1;
+ height: 30px;
+}
+
+.btnmatuser{
+  border-radius:8px 8px 8px 8px;
+  background-color: #ecf7f1;
+ height: 30px;
+}
+
+.navtitle{
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.sidenavtitle{
+  color: #778c85;
+  font-size: 13px;
+  padding-left: 25px;
+}
+
+/*start notifi dropdown*/
+.dropdown-menu{
+  background:#353c42!important;
+}
+.notification-item {
+ padding:2px;
+ background:#353c42!important;
+ color: #0f68ee;
+ height: 40px;
+margin: 5px;
+
+ }
+
+ .ico-warnning{
+  color: #ebb434;
+ }
+
+ .btnnotificlose {
+   color: rgb(202, 11, 11);
+ }
+
+.hr{
+  height: 1.5px;
+  color:rgb(255, 255, 255);
+}
+.mat-cell {
+  font-size: 13px;
+  background:#353c42!important;
+  border-color: rgb(151, 146, 146);
+  color: white;
+
+}
+
+
+/*end notifi drop down*/
+.hr-tv{
+  margin-left: -10px;
+}
+
+/*start user option drop down*/
+
+.userset{
+ color: white;
+ font-size: 14px;
+}
+
+.userset:hover{
+  background-color: #2f3438;
+}
+
+.user-setting-icon {
+  padding-right: 5px;
+}
+
+.user-logout-icon{
+  padding-right: 5px;
+}
+/*end user option drop down*/
+
+
+
+
+::ng-deep .mat-tooltip {
+  font-size: 12px;
+  background-color: rgb(75, 73, 73);
+  color: white;
+}
+
+
+.subitm{
+  font-size: 13px;
+}
+
+
+@media print{
+  .doNotPrint{display:none !important;}
+}

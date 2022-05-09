@@ -1,0 +1,467 @@
+<i class="fas fa-home"></i> {{lan.arrylan.customermaster_add_rlink1}} /
+		<i class="fas fa-user"></i> {{lan.arrylan.customermaster_add_rlink2}} / <i class="fas fa-plus"></i> {{lan.arrylan.customermaster_add_rlink3}}
+
+
+
+      <div class="col" >
+       <!--start main card-->
+         <div class="card" style="margin-top: 10px;margin-right: 15px; box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2)">
+        <h4 class="card-header" style="background-color:white;"> 
+ 
+         <div class="row">
+ 
+             <div class="col">
+               <div style="margin-top: -5px;margin-bottom:0px;"><i class="far fa-calendar-check"  style="padding-right: 10px;font-size: 18px;padding-top: 5px"></i>{{lan.arrylan.customermaster_add_cardname}} 
+               </div>
+             </div>
+           
+             <div class="col" style="float: right;max-width: 300px;">
+ 
+ 
+             <div class="col" >
+              <div style="padding-left:10px;padding-top:0px">
+                <button [disabled]="frmmodel.IsbtnSaveDisabled" type="button" (click)="clicksubmit()" class="btn btn-primary btnflip btnsave"  data-bs-toggle="dropdown"><div class="flapico2">{{lan.arrylan.common_btnsave}}</div></button>
+             </div>
+             <div style="padding-left:10px;padding-top:0px;">
+              <button type="button" (click)="btncancelclick()" class="btn btn-primary btnflip btncancel"><div class="flapico2">{{lan.arrylan.common_btncancel}}</div></button>
+           </div>
+               <div style="margin-left:180px;padding-top:0px">
+                 <button type="button" (click)="btnbackclick()" class="btn btn-primary btnflip btnmat1"><div class="flapico"><i class="fas fa-hand-point-left"></i> {{lan.arrylan.common_btnback}}</div></button>
+              </div>  
+             </div>
+ 
+ 
+ 
+             </div>
+ 
+         </div>
+ 
+ 
+        </h4>
+  
+        <div class="card-body" style="margin: -10px 0px 0px 0px;">
+ 
+         
+
+ 
+ 
+
+    <mat-tab-group mat-align-tabs="start" style="margin-top: -20px;">
+       <mat-tab>
+        <ng-template mat-tab-label>
+          <div style="margin-top: -5px;margin-bottom:0px;"><i class="fas fa-magic"  style="padding-right: 10px;font-size: 18px;padding-top: 5px"></i>{{lan.arrylan.customermaster_add_tab1}}
+            <span *ngIf="validation.vendor_id?.length > 0||validation.vendor_name?.length > 0">
+            <i class="fas fa-exclamation-circle criticon"></i>
+            </span>
+          </div>
+        </ng-template>
+         <!--start sub card1-->
+         <div class="card">
+        
+           <div class="card-body">
+                
+             <div class="row">             
+
+                <div  class="col-md-6">
+              
+                   <div class="field-inline">
+                      <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblid}} *</label>
+                      <input type="text"    [(ngModel)]="frmmodel.vendor_id"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" (input)="on_item_id_change()">
+                   </div>
+
+                   
+                   <div class="row">
+                    <div class="col"  style="padding-left: 140px;font-size: 12px;color: red;">
+                      <span *ngIf="validation.vendor_id?.length > 0">
+                        {{validation.vendor_id}}
+                      </span> 
+                    </div>
+                   </div>
+
+                </div>
+         
+
+                <div  class="col-md-6">
+                    <div class="field-inline">
+                     <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblname}} *</label>
+                     <input type="text" [(ngModel)]="frmmodel.vendor_name"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" (input)="on_description_change()">
+                    </div>
+
+                    <div class="row">
+                      <div class="col"  style="padding-left: 140px;font-size: 12px;color: red;">
+                        <span *ngIf="validation.vendor_name?.length > 0">
+                          {{validation.vendor_name}}
+                        </span> 
+                      </div>
+                     </div>
+
+                </div>
+
+           </div> 
+
+
+
+           <div class="row">             
+
+            <div class="col-md-6">
+          
+                <div class="field-inline">
+                  <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lbladdress}}</label>
+                  <input type="text"   [(ngModel)]="frmmodel.address"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" >
+               </div>
+
+               
+            </div>
+     
+            <div  class="col-md-6">
+          
+              <div class="field-inline">
+                 <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblcontactno}}</label>
+                 <input type="text"   [(ngModel)]="frmmodel.contact_no"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+              </div>
+           </div>
+            
+
+       </div> 
+
+
+           
+
+
+
+
+
+
+
+        <div class="row">             
+
+            <div  class="col-md-6">
+          
+               <div class="field-inline">
+                  <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblemail}}</label>
+                  <input type="text"   [(ngModel)]="frmmodel.email"   class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+               </div>
+            </div>
+     
+
+            <div  class="col-md-6">
+                <div class="field-inline">
+                 <label class="form-lbl"  for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblcompanyname}}</label>
+                 <input type="text"  [(ngModel)]="frmmodel.company_name"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="">
+                </div>
+
+               
+
+
+            </div>
+
+       </div> 
+ 
+
+
+       <div class="row">             
+
+        <div  class="col-md-6">
+      
+           <div class="field-inline">
+              <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.customermaster_add_lblcompanycontactno}}</label>
+              <input type="text"   [(ngModel)]="frmmodel.company_contact_no"  class="form-control form-control-sm" id="colFormLabelSm" placeholder="" >
+           </div>
+        </div>
+ 
+
+
+       </div> 
+
+
+
+
+      
+
+
+
+
+   
+
+
+
+     
+
+        
+
+           
+             
+
+
+          
+
+
+
+            
+            
+  
+
+
+
+        
+
+
+
+
+       
+
+       
+   
+     
+
+
+
+   
+
+
+          
+
+
+
+
+
+
+             
+
+
+
+           </div>
+           </div>
+           <!--end sub card1-->
+
+
+        </mat-tab>
+
+
+
+
+
+        <mat-tab>
+         <ng-template mat-tab-label>
+           <div style="margin-top: -5px;margin-bottom:0px;"><i class="fas fa-cogs"  style="padding-right: 10px;font-size: 18px;padding-top: 5px"></i>{{lan.arrylan.customermaster_add_tab3}}
+           </div>
+         </ng-template>
+
+
+             <div class="card">
+     
+                 <div class="card-body">
+                      
+                   <div class="row">             
+      
+
+                   
+                    <div class="row">             
+
+                      <div  class="col-md-6">
+                    
+                         <div class="field-inline">
+                            <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.warehousemaster_add_lblcustom1}}</label>
+                            <input type="text"   [formControl]="custom1_fctrl" [matAutocomplete]="custom1_auto" [(ngModel)]="frmmodel.custom_field1"  class="form-control form-control-sm" id="colFormLabelSm">
+                            <mat-autocomplete  #custom1_auto="matAutocomplete">
+                              <mat-option *ngFor="let street of filtered_custom1 | async" [value]="street.custom_field1">
+                                {{street.custom_field1}}
+                              </mat-option>
+                            </mat-autocomplete>
+                              <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+                         </div>
+                        
+          
+                      </div>
+  
+                 </div> 
+
+
+
+
+                 <div class="row">             
+
+                  <div  class="col-md-6">
+                    
+                    <div class="field-inline">
+                      <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.warehousemaster_add_lblcustom2}}</label>
+                      <input type="text"   [formControl]="custom2_fctrl" [matAutocomplete]="custom2_auto" [(ngModel)]="frmmodel.custom_field2"  class="form-control form-control-sm" id="colFormLabelSm">
+                      <mat-autocomplete  #custom2_auto="matAutocomplete">
+                        <mat-option *ngFor="let street of filtered_custom2 | async" [value]="street.custom_field2">
+                          {{street.custom_field2}}
+                        </mat-option>
+                      </mat-autocomplete>
+                      <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+                   </div>
+      
+                  </div>
+      
+             </div> 
+           
+          
+          
+                 <div class="row">             
+          
+                  <div  class="col-md-6">
+                
+                    <div class="field-inline">
+                      <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.warehousemaster_add_lblcustom3}}</label>
+                      <input type="text"   [formControl]="custom3_fctrl" [matAutocomplete]="custom3_auto" [(ngModel)]="frmmodel.custom_field3"  class="form-control form-control-sm" id="colFormLabelSm">
+                      <mat-autocomplete  #custom3_auto="matAutocomplete">
+                        <mat-option *ngFor="let street of filtered_custom3 | async" [value]="street.custom_field3">
+                          {{street.custom_field3}}
+                        </mat-option>
+                      </mat-autocomplete>
+                      <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+                   </div>
+          
+                  </div>
+        
+                 </div> 
+
+
+
+
+                 <div class="row">             
+          
+                  <div  class="col-md-6">
+          
+                    <div class="field-inline">
+                      <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.warehousemaster_add_lblcustom4}}</label>
+                      <input type="text"   [formControl]="custom4_fctrl" [matAutocomplete]="custom4_auto" [(ngModel)]="frmmodel.custom_field4"  class="form-control form-control-sm" id="colFormLabelSm">
+                      <mat-autocomplete  #custom4_auto="matAutocomplete">
+                        <mat-option *ngFor="let street of filtered_custom4 | async" [value]="street.custom_field4">
+                          {{street.custom_field4}}
+                        </mat-option>
+                      </mat-autocomplete>
+                      <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+                   </div>
+          
+                  </div>
+          
+                 </div> 
+          
+          
+          
+          
+                 <div class="row">             
+          
+                  <div  class="col-md-6">
+          
+                    <div class="field-inline">
+                      <label class="form-lbl" for="colFormLabelSm">{{lan.arrylan.warehousemaster_add_lblcustom5}}</label>
+                      <input type="text"   [formControl]="custom5_fctrl" [matAutocomplete]="custom5_auto" [(ngModel)]="frmmodel.custom_field5"  class="form-control form-control-sm" id="colFormLabelSm">
+                      <mat-autocomplete  #custom5_auto="matAutocomplete">
+                        <mat-option *ngFor="let street of filtered_custom5 | async" [value]="street.custom_field5">
+                          {{street.custom_field5}}
+                        </mat-option>
+                      </mat-autocomplete>
+                      <button  type="button" tabindex="-1" class="btn btn-primary btnhelp"><div class="icohelp"><i  class="fas fa-chevron-down"></i></div></button>
+                   </div>
+          
+                  </div>
+           
+                 </div> 
+
+
+                   </div> 
+
+            
+           </div>
+           </div>
+
+     </mat-tab>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <mat-tab>
+      <ng-template mat-tab-label>
+        <div style="margin-top: -5px;margin-bottom:0px;"><i class="fas fa-cogs"  style="padding-right: 10px;font-size: 18px;padding-top: 5px"></i>{{lan.arrylan.customermaster_add_tab4}}
+        </div>
+      </ng-template>
+
+
+          <div class="card">
+  
+              <div class="card-body">
+                   
+                <div class="row">             
+   
+
+                
+                 <div class="row">             
+
+                   <div  class="col-md-6">
+                 
+                    <input id="photo" name="studentPhoto" type="file" (change)="setPhoto($event)" class="form-control">
+                    <img style="padding-top: 10px;" [src]="url" height="200" width="200" class="img-thumnail">
+       
+                   </div>
+
+              </div> 
+
+
+
+                </div> 
+
+         
+        </div>
+        </div>
+
+  </mat-tab>
+
+
+
+
+
+    </mat-tab-group>
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+           
+ 
+         </div>
+      </div>
+      <!--end main card-->
+ 
+         
+
+
+
+
+
+      
+   </div>     
+  
+ 

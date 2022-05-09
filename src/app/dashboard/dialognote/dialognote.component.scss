@@ -1,0 +1,32 @@
+.status_shadow_critical{
+    animation: mymove_critical 5s infinite;
+  }
+  
+  @keyframes mymove_critical{
+    50% {box-shadow: 1px 1px 17px red inset;}
+  }
+
+  .status_shadow_up:hover {
+    animation: mymove_up 2s infinite;
+  }
+  
+  @keyframes mymove_up {
+    50% {box-shadow: 1px 1px 17px #0ffd92 inset;}
+  }
+
+  
+  .btnmat2{
+    margin-left: 10px;
+    float: left;
+    max-width: 200px;
+    max-height: 20px;
+    text-align: center;
+    background-color: #19d162;
+    border-color: #17e66a;
+  }
+
+  .flapico2{
+    font-size: 12px;
+    margin-top: -5px;
+    color: rgb(255, 255, 255);
+  }

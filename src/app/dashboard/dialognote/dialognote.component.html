@@ -1,0 +1,15 @@
+<mat-dialog-content>
+<div class="card border-dark mb-3"  style=" width:90%; margin-left:4.2%;margin-top: 18px; display: inline-block; box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);">
+    <div class="card-header" style="font-weight:500;height: 20px;">
+        <p style="float:left;font-size: 13px;margin-top: -7px;font-weight: 500;">Loan No {{all_value[0]}} Write note here...</p>
+        <i class="fa fa-window-close" aria-hidden="true" style="float: right;font-size: 17px;cursor: pointer;margin-top: -7px;" (click)="onNoClick()"></i>
+
+    </div>
+    <div class="card-body ">
+       <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" style="font-size: 13px;" [(ngModel)]="frmmodel.note"  placeholder="Write note"></textarea>
+       <button type="button"  class="btn btn-primary btnflip btnmat2" (click)="SaveNote()" style="box-shadow: 0 12px 16px 0 rgb(0 0 0 / 24%), 0 17px 50px 0 rgb(0 0 0 / 19%);background-color: rgb(9, 92, 245);border-color:rgb(9, 92, 245) ;font-size: 12px;font-family:sans-serif;font-style: normal;float:right;margin-top: 10px; padding: -5px;margin-bottom: 10px;"><div class="flapico2"><i class="">save</i></div></button>
+   
+      </div>
+</div>
+</mat-dialog-content>
+

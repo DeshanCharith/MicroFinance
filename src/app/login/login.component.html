@@ -1,0 +1,63 @@
+<html>
+<title>Itheon</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+<meta name="description" content="Simple Login Example. This is a dummy login concept. It would need a lot more code to become functional.">
+
+<body>
+	<div class="middle">
+		<div class="column" >
+<!--Logo & Site Title-->
+			<a class="branding-logo">
+        <img src="assets/images/Logo.png" width="60px" height="60px"/>
+      </a>
+			<p class="branding-title">{{lan.arrylan.product_name}}</p>
+      
+       
+        <router-outlet></router-outlet>
+<!--Slider Start-->
+			<div class="login-selection">
+				<p id="login"></p> 
+				<p id="recover"></p>
+				<p id="help"></p>
+				<div class="slide">
+<!--Login Contents Start-->	
+					<div class="scroll-hidden">
+						<p class="input-identity">{{lan.arrylan.hed_name}}</p>
+					<div class="input-field">
+						<form  ngNativeValidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+							<p class="ani user"><input type="text" class="loger username" placeholder={{lan.arrylan.username}} id="uname" formControlName="name" value="" autofocus="" autocomplete="off" required></p>
+							<p class="ani pass"><input type="password" class="loger password" placeholder="{{lan.arrylan.password}}" id="pname" formControlName="password" value="" autofocus="" autocomplete="off" required></p>
+							<p class="blu-b log-sub"><input type="submit"  value="{{lan.arrylan.btn_login}}"></p>
+						</form>
+
+					
+
+					</div>	
+					</div>
+<!--Login Contents End-->
+
+
+
+
+				</div>
+
+<!--Slider Buttons-->
+				
+			</div>
+<!--Slider End-->
+		</div>
+<!--Bottom Column Copyright Footer-->
+			<div class="login-footer">
+<!--Footer Text & Slide Selector for Help-->
+				<div class="sld-selector">
+					<a href="">{{lan.arrylan.footer_name}}</a>
+					<b>|</b>
+					<p class="cright">{{lan.arrylan.build_year}}</p>
+					<b>|</b>
+				</div>
+			</div>
+	</div>
+</body>
+</html>
